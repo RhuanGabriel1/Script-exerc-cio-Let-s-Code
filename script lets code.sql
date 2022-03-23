@@ -9,6 +9,7 @@ email varchar(45)
 
 create table dependente(
 id int not null primary key,
+
 titular_id int not null,
 dependente_id int not null,
 
@@ -34,15 +35,10 @@ constraint titular_id  foreign key (titular_id) references cliente(id)
 
 create table contrato_produto(
 id int not null primary key,
+
 contrato_id int not null ,
 produto_id int not null ,
 
 constraint contrato_id foreign key (contrato_id) references contrato(id),
 constraint produto_id foreign key (produto_id) references produto(ans_id)
 );
-
-
-
-
-
-
